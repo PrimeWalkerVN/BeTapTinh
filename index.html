@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+    <script src="./script.js"></script>
+    <title>BeTapTinh</title>
+  </head>
+  <body>
+    
+    <header>
+      <h1>Bé tập tính</h1>
+    </header>
+    <br>
+    <div class="container-fluid">
+      <form name="caculate" action="">
+        <div class="row">
+          <div class="col-sm-1">
+            <label for="FirstNumber">Số thứ nhất</label>
+          </div>
+
+          <div class="col-sm-2">
+            <input class ="col-12" type="text" id="FirstNumber" name="FirstNumber" onmouseout="checkAvalid(this.form)"/>
+          </div>
+
+          <div class="col-sm-2">
+            <input type="radio" name="Operator" value="Summation" /> Cộng
+            <input type="radio" name="Operator" value="Subtraction" /> Trừ
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-1">
+            <label for="SecondNumber">Số thứ hai</label>
+          </div>
+
+          <div class="col-sm-2">
+            <input class="col-12" type="text" id="SecondNumber" name="SecondNumber" onmouseout="checkAvalid(this.form)" />
+          </div>
+
+          <div class="col-sm-2">
+            <input type="radio" name="Operator" value="Multiplication" /> Nhân
+            <input type="radio" name="Operator" value="Division" /> Chia
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-sm-1">
+            <label for="ResultNumber">Kết quả</label>
+          </div>
+
+          <div class="col-sm-2">
+            <input class= "col-12" type="text" id="ResultNumber" name="ResultNumber" />
+          </div>
+
+          <div class="col-sm-2">
+            <input type="button" value="Tính" onclick="commute(this.form)">
+          </div>
+        </div>   
+        
+        <div class="row Notify">
+          <div class="col-sm-1">
+          <h6>Thông báo</h6>
+          </div>
+          <div class="col-sm-11">
+          <p id="content-notify">Result</p> 
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+  </body>
+</html>
